@@ -1,27 +1,27 @@
 'use client'
 import { motion } from 'framer-motion'
-import { FaApple, FaBolt, FaBrain, FaShieldAlt } from 'react-icons/fa'
+import { FaMobileAlt, FaBolt, FaBrain, FaShieldAlt } from 'react-icons/fa'
 
 const skillsData = [
-  { 
-    title: "Mobile Native", 
-    icon: <FaApple />, 
-    skills: ["Kotlin", "Swift", "Jetpack Compose", "SwiftUI", "Coroutines", "Room DB", "Hilt/Dagger"] 
+  {
+    title: "Mobile Development",
+    icon: <FaMobileAlt />,
+    skills: ["Kotlin", "Jetpack Compose", "Android SDK", "Flutter", "Dart", "Bloc", "Swift", "UIKit", "XCFrameworks", "Coroutines", "Room DB", "Hilt/Dagger"]
   },
-  { 
-    title: "Backend & Cloud", 
-    icon: <FaBolt />, 
-    skills: ["Python FastAPI", "Docker", "PostgreSQL", "Redis", "WebSockets (Socket.IO)", "Google Maps API"] 
+  {
+    title: "Backend & Cloud",
+    icon: <FaBolt />,
+    skills: ["Python", "FastAPI", "Flask", "REST APIs", "PostgreSQL", "Docker", "AWS EC2", "AWS S3", "WebSockets", "Retrofit", "Offline-First Architecture"]
   },
-  { 
-    title: "AI & Edge ML", 
-    icon: <FaBrain />, 
-    skills: ["TensorFlow Lite", "CameraX", "ML Kit", "Signal Processing", "OCR & VAD", "Mu-law Compression"] 
+  {
+    title: "AI & LLM",
+    icon: <FaBrain />,
+    skills: ["TensorFlow Lite", "CameraX", "OCR", "Voice Activity Detection", "Ollama", "Llama", "RAG Pipeline", "On-Device Inference", "Mu-law Compression"]
   },
-  { 
-    title: "DevOps & Security", 
-    icon: <FaShieldAlt />, 
-    skills: ["CI/CD (GitHub Actions)", "ProGuard/R8", "OWASP Mobile Top 10", "Git", "Gradle Optimization"] 
+  {
+    title: "DevOps & Security",
+    icon: <FaShieldAlt />,
+    skills: ["Git", "GitHub Actions", "CI/CD", "Gradle", "ProGuard/R8", "OWASP Mobile Guidelines", "Secure API Auth", "Encrypted Storage", "Agile/Scrum"]
   }
 ]
 
@@ -29,7 +29,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 relative">
       <div className="max-w-6xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -37,13 +37,13 @@ export default function Skills() {
         >
           <h2 className="text-4xl font-bold mb-4 font-mono">Technical Arsenal</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A comprehensive stack enabling full-cycle development from edge devices to cloud inference.
+            A full-stack toolkit spanning native mobile, Python backends, cloud infrastructure, and on-device AI.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillsData.map((category, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

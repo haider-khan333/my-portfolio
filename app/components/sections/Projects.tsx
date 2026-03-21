@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { FaExternalLinkAlt, FaFingerprint, FaMicrophoneAlt, FaDna,FaBolt, FaLock, FaServer, FaMobileAlt, FaChartLine, FaCalendarCheck } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaFingerprint, FaMicrophoneAlt, FaDna, FaBolt, FaLock, FaServer, FaMobileAlt, FaChartLine, FaCalendarCheck, FaRobot } from 'react-icons/fa'
 import Home from '@/public/home_view.png'
 import Image from 'next/image'
 export default function Projects() {
@@ -164,6 +164,20 @@ export default function Projects() {
                 <div className="flex gap-2 mb-4 flex-wrap">
                     {["Deep Learning", "CNN", "Python", "Medical Imaging"].map(tag => (
                         <span key={tag} className="text-xs font-mono text-red-400 bg-red-400/10 px-2 py-1 rounded">{tag}</span>
+                    ))}
+                </div>
+            </motion.div>
+
+            {/* Project 5: LLM RAG Pipeline */}
+            <motion.div className="glass-card p-8 rounded-2xl group hover:border-green-500/30 transition-all col-span-full md:col-span-1">
+                <div className="mb-6 p-3 bg-green-500/10 rounded-xl w-fit text-green-400 text-3xl"><FaRobot /></div>
+                <h3 className="text-2xl font-bold mb-2">LLM RAG Pipeline</h3>
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                    Personal project: a <span className="text-white font-bold">Retrieval-Augmented Generation</span> pipeline integrating Ollama with the Llama model for document-based question answering using local LLM inference — no cloud API costs.
+                </p>
+                <div className="flex gap-2 mb-4 flex-wrap">
+                    {["Python", "FastAPI", "Ollama", "Llama", "RAG"].map(tag => (
+                        <span key={tag} className="text-xs font-mono text-green-400 bg-green-400/10 px-2 py-1 rounded">{tag}</span>
                     ))}
                 </div>
             </motion.div>
